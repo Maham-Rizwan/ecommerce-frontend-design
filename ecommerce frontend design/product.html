@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="pushbar">
+          <!-- Hamburger Button -->
+          <button class="menu-toggle" id="menu-toggle">
+            &#9776;
+          </button>
+        <!-- Sidebar Menu -->
+          <div class="side-menu" id="side-menu">
+            <div class="gray-row">
+              <img src="./assets/dp.jpg" alt="Logo" class="dp">
+              <div class="auth-links">
+                <a href="#">Sign In</a> | <a href="#">Register</a>
+              </div>
+            </div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a href="#">Categories &#9662;</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Category 1</a></li>
+                  <li><a href="#">Category 2</a></li>
+                  <li><a href="#">Category 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Favorites</a></li>
+              <li><a href="#">My Orders</a></li>
+              <hr>
+              <li class="dropdown">
+                <a href="#">English | USD &#9662;</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">French</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About</a></li>
+              <hr>
+              <li><a href="#">User Agreement</a></li>
+              <li><a href="#">Partnership</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+       <div class="navbar-left">
+          <img src="./assets/1.png" alt="Logo" class="logo">
+          <span class="company-name">Brand</span>
+        </div>
+        <div class="navbar-center">
+          <div class="search-container">
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search..." oninput="showDropdown()">
+            <div class="separator"></div>
+            <select class="search-dropdown" id="categorySelect">
+              <option value="option1">All Categories</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+            <button class="search-button" onclick="searchAction()">Search</button>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <a href="./index.html" class="icon" id="profile">
+            <i  class="fa-solid fa-user fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">profile</p>
+          </a>
+          <a id="mess" href="#" class="icon">
+            <i class="fa-solid fa-message fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">message</p>
+          </a>
+          <a id="mess" href="#" class="icon">
+            <i class="fa-solid fa-heart fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">order</p>
+          </a>
+          <a href="./cart.html" class="icon">
+            <i class="fa-solid fa-cart-shopping fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">cart</p>
+          </a>
+        </div>
+       </nav>
+      <div class="searchnav">
+        <input class="searchinp" type="search" placeholder="Search">
+        <div class="navbutton">
+        <button class="button1" id="cat"><a href=""> Categories</a></button>
+        <button class="button1"><a href="#">Gadgets</a></button>
+        <button class="button1"><a href="">Clothes</a></button>
+        <button class="button1"><a href="">Accessory</a></button>
+        <button class="button1" id="auto"><a href="">Automobile</a></button>
+        </div>
+      </div>
+     <nav class="navbar2"  >
+      <ul class="navbar-left">
+          <li class="dropdown"> 
+              <a href="#">All categories</a>
+              <div class="dropdown-content">
+                  <a href="./auto.html">Automobile</a>
+                  <a href="./product.html">Clothes & wear</a>
+                  <a href="auto.html">Home interior</a>
+                  <a href="product.html">Computer & tech</a>
+                  <a href="auto.html">Tools, equipment</a>
+                  <a href="product.html">Sports & outdoor</a>
+                  <a href="auto.html">Animal & pet</a>
+                  <a href="product.html">Machinery tools</a>
+              </div>
+          </li>
+          <li><a href="#">Hot offers</a></li>
+          <li><a href="#">Gift boxes</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Menu item</a></li>
+          <li class="dropdown">
+              <a href="#">Help</a>
+              <div class="dropdown-content">
+                  <a href="#">Subitem 1</a>
+                  <a href="#">Subitem 2</a>
+                  <a href="#">Subitem 3</a>
+              </div>
+          </li>
+      </ul>
+      <ul class="navbar2-right">
+          <li class="dropdown">
+              <a href="#">English, USD</a>
+              <div class="dropdown-content">
+                  <a href="#">Turkish Lira, TRY</a>
+                  <a href="#">Pakistan, PKR</a>
+                  <a href="#">EUROPE, EURO</a>
+              </div>
+          </li>
+          <li class="dropdown">
+              <a href="#">Ship to</a>
+              <div class="dropdown-content">
+                  <a href="#">Pakistan</a>
+                  <a href="#">America</a>
+                  <a href="#">Europe</a>
+                  <a href="#">Germany</a>
+                  <a href="#">Africa</a>
+                  <a href="#">India</a>
+                  <a href="#">Greece</a>
+                  <a href="#">Turkey</a>
+                  <a href="#">Saudia Arabia</a>
+                  <a href="#">Iran</a>
+                  <a href="#">Italy</a>
+              </div>
+          </li>
+      </ul>
+  </nav>
+
+  <div class="container">
+<section class="productcat">
+  <div class="section">
+    <hr>
+    <p onclick="toggleContent('category-content')"><b>Category</b> <i class="fas fa-angle-down angle-down" id="category-arrow"></i></p>
+    <div id="category-content" class="content">
+          <p class="p"><a href="">Mobile accessory</a></p>
+          <p class="p"><a href="">Electronics</a></p>
+          <p class="p"><a href="">Smart phones</a></p>
+          <p class="p"><a href="">Modern tech</a></p>
+          <div class="seeall">
+          <p class="p"><a href="">See all</a></p>
+          </div>
+          </div>
+          </div>
+        <hr>
+        <div class="section">
+            <p onclick="toggleContent('brands-content')"><b>Brands </b><i class="fas fa-angle-down angle-down" id="brands-arrow"></i></p>
+            <div id="brands-content" class="content">
+        <input class="p" id="hello" type="checkbox" value="samsung">Samsung
+        <br>
+        <input class="p" id="hello" type="checkbox" value="huawei">Apple
+        <br>
+        <input class="p" id="hello" type="checkbox" value="HUAWEI">Huawei
+        <br>
+        <input class="p" id="hello" type="checkbox" value="pocco">Pocco
+        <br>
+        <input class="p" id="hello" type="checkbox" value="lenovo">Lenovo
+        <div class="seeall">
+            <p class="p"><a href="">See all</a></p>
+          </div>
+          </div>
+          </div>
+        <hr>
+        <div class="section">
+            <p onclick="toggleContent('features-content')"><b>Features</b> <i class="fas fa-angle-down angle-down" id="features-arrow"></i></p>
+            <div id="features-content" class="content">
+           
+        <input class="p" id="hello" type="checkbox" value="metallic">Metallic
+        <br>
+        <input class="p" id="hello" type="checkbox" value="plastic cover">Plastic cover
+        <br>
+        <input class="p" id="hello" type="checkbox" value="8GB Ram">8GB Ram
+        <br>
+        <input class="p" id="hello" type="checkbox" value="Super power">Super power
+        <br>
+        <input class="p" id="hello" type="checkbox" value="large memory">Large memory
+        <div class="seeall">
+            <p class="p"><a href="">See all</a></p>
+          </div>
+          </div>
+          </div>
+        <hr>
+        <div class="section">
+            <p onclick="toggleContent('price-content')"><b>Price Range</b> <i class="fas fa-angle-down angle-down" id="price-arrow"></i></p>
+            <div id="price-content" class="content">
+        <br>
+        <label >min:</label>
+        <input type="number" placeholder="0">
+        <label>max:</label>
+        <input type="number" placeholder="99999">
+        <br>
+        <button class="p" type="submit">Apply</button>
+        </div>
+        </div>
+        <hr>
+        <div class="section">
+            <p onclick="toggleContent('condition-content')"><b>Condition</b> <i class="fas fa-angle-down angle-down" id="condition-arrow"></i></p>
+            <div id="condition-content" class="content">
+             
+   
+        <input class="p" id="radio" type="radio" name="Condition" value="any">Any
+        <br>
+        <input class="p" id="radio" type="radio" name="Condition" value="any">Refurbished
+        <br>
+        <input class="p" id="radio" type="radio" name="Condition" value="any">Brand new
+        <br>
+        <input class="p" id="radio" type="radio" name="Condition" value="any">Old items
+        <br>
+        </div>
+        </div>
+        <hr>
+        <div class="section">
+            <p onclick="toggleContent('ratings-content')"><b>Ratings</b> <i class="fas fa-angle-down angle-down" id="ratings-arrow"></i></p>
+            <div id="ratings-content" class="content">
+            <input type="checkbox" class="p" id="hello">
+            <label for="star5" class="yellow">&#9733;</label>
+            <label for="star4" class="yellow">&#9733;</label>
+            <label for="star3" class="yellow">&#9733;</label>
+            <label for="star2" class="yellow">&#9733;</label>
+            <label for="star1" class="yellow">&#9733;</label>
+            <br>
+            <input type="checkbox" class="p"  id="hello">
+            <label for="star5" class="yellow">&#9733;</label>
+            <label for="star4" class="yellow">&#9733;</label>
+            <label for="star3" class="yellow">&#9733;</label>
+            <label for="star2" class="yellow">&#9733;</label>
+            <label for="star1" class="gray" >&#9733;</label>
+            <br>
+            <input type="checkbox" class="p" id="hello" >
+            <label for="star5" class="yellow">&#9733;</label>
+            <label for="star4" class="yellow">&#9733;</label>
+            <label for="star3" class="yellow">&#9733;</label>
+            <label for="star1" class="gray">&#9733;</label>
+            <label for="star1" class="gray" >&#9733;</label>
+            <br>
+            <input type="checkbox" class="p" id="hello">
+            <label for="star5" class="yellow">&#9733;</label>
+            <label for="star4" class="yellow">&#9733;</label>
+            <label for="star1" class="gray" >&#9733;</label>
+            <label for="star1" class="gray" >&#9733;</label>
+            <label for="star1" class="gray">&#9733;</label>
+        </div>
+    </section>
+   
+    
+    <section class="product-cards">
+      <div class="products">
+        <img class="pimage" src="./assets/red.jpg" alt="">
+        <h6 class="itam">Canon Camera EOS 2000,Black 10x zoom</h6>
+        <h5><b>$998.00</b></h5>
+        <h6 class="cancel"><b>$1128.00</b></h6>
+        <div class="stars">
+          <label for="star5" class="yellow">&#9733;</label>
+          <label for="star4" class="yellow">&#9733;</label>
+          <label for="star3" class="yellow">&#9733;</label>
+          <label for="star2" class="yellow">&#9733;</label>
+          <label for="star1" class="gray">&#9733;</label>
+      </div>
+      <h6 class="rate">7.5</h6>
+      <div class="orders">
+      <i class="fa-solid fa-circle fa-2xs" id="dot" style="color: #dedede;"></i>
+      <h6 class="ordr">154 orders</h6>
+      </div>
+      <div class="shipping">
+      <i class="fa-solid fa-circle fa-2xs" id="dott" style="color: #dedede;"></i>
+      <h6 class="ship">Free Shipping</h6>
+      </div>
+      <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi <br> perferendis maiores esse quod consequuntur animi eaque !</p>
+      <h2 class="viewdetails"><a href="./details.html"> View Details </a></h2>
+      <div class="heartcart">
+        <a href="" onclick="addToCart('Canon Camera EOS 2000', '$998.00', './assets/red.jpg')"><i class="fa-regular fa-heart fa-lg" style="color: #417eee;"></i></a>
+      </div>
+      </div>
+<div class="products">
+  <img class="pimage" src="./assets/3-removebg-preview.png" alt="">
+  <h6 class="itam">Canon Camera EOS 2000,Black 10x zoom</h6>
+  <h5><b>$998.00</b></h5>
+  <h6 class="cancel"><b>$1128.00</b></h6>
+  <div class="stars">
+    <label for="star5" class="yellow">&#9733;</label>
+    <label for="star4" class="yellow">&#9733;</label>
+    <label for="star3" class="yellow">&#9733;</label>
+    <label for="star2" class="yellow">&#9733;</label>
+    <label for="star1" class="gray">&#9733;</label>
+</div>
+<h6 class="rate">7.5</h6>
+<div class="orders">
+<i class="fa-solid fa-circle fa-2xs" id="dot" style="color: #dedede;"></i>
+<h6 class="ordr">154 orders</h6>
+</div>
+<div class="shipping">
+<i class="fa-solid fa-circle fa-2xs" id="dott" style="color: #dedede;"></i>
+<h6 class="ship">Free Shipping</h6>
+</div>
+<p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi <br> perferendis maiores esse quod consequuntur animi eaque !</p>
+<h2 class="viewdetails"><a href="./details.html"> View Details </a></h2>
+<div class="heartcart">
+  <a href="" onclick="addToCart('Canon Camera EOS 2000', '$998.00', './assets/3-removebg-preview.png')"><i class="fa-regular fa-heart fa-lg" style="color: #417eee;"></i></a>
+</div>
+</div>
+<div class="products">
+  <img class="pimage" src="./assets/2.jpg" alt="">
+  <h6 class="itam">Canon Camera EOS 2000,Black 10x zoom</h6>
+  <h5><b>$998.00</b></h5>
+  <h6 class="cancel"><b>$1128.00</b></h6>
+  <div class="stars">
+    <label for="star5" class="yellow">&#9733;</label>
+    <label for="star4" class="yellow">&#9733;</label>
+    <label for="star3" class="yellow">&#9733;</label>
+    <label for="star2" class="yellow">&#9733;</label>
+    <label for="star1" class="gray">&#9733;</label>
+</div>
+<h6 class="rate">7.5</h6>
+<div class="orders">
+<i class="fa-solid fa-circle fa-2xs" id="dot" style="color: #dedede;"></i>
+<h6 class="ordr">154 orders</h6>
+</div>
+<div class="shipping">
+<i class="fa-solid fa-circle fa-2xs" id="dott" style="color: #dedede;"></i>
+<h6 class="ship">Free Shipping</h6>
+</div>
+<p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi <br> perferendis maiores esse quod consequuntur animi eaque !</p>
+<h2 class="viewdetails"><a href="./details.html"> View Details </a></h2>
+<div class="heartcart">
+  <a href="#" onclick="addToCart('Canon Camera EOS 2000', '$998.00', './assets/2jpg')"><i class="fa-regular fa-heart fa-lg" style="color: #417eee;"></i></a>
+</div>
+</div>
+<div class="products">
+  <img class="pimage" src="./assets/7-removebg-preview (1).png" alt="">
+  <h6 class="itam">Canon Camera EOS 2000,Black 10x zoom</h6>
+  <h5><b>$998.00</b></h5>
+  <h6 class="cancel"><b>$1128.00</b></h6>
+  <div class="stars">
+    <label for="star5" class="yellow">&#9733;</label>
+    <label for="star4" class="yellow">&#9733;</label>
+    <label for="star3" class="yellow">&#9733;</label>
+    <label for="star2" class="yellow">&#9733;</label>
+    <label for="star1" class="gray">&#9733;</label>
+</div>
+<h6 class="rate">7.5</h6>
+<div class="orders">
+<i class="fa-solid fa-circle fa-2xs" id="dot" style="color: #dedede;"></i>
+<h6 class="ordr">154 orders</h6>
+</div>
+<div class="shipping">
+<i class="fa-solid fa-circle fa-2xs" id="dott" style="color: #dedede;"></i>
+<h6 class="ship">Free Shipping</h6>
+</div>
+<p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi <br> perferendis maiores esse quod consequuntur animi eaque !</p>
+<h2 class="viewdetails"><a href="./details.html"> View Details </a></h2>
+<div class="heartcart">
+  <a href="" onclick="addToCart('Canon Camera EOS 2000', '$998.00', './assets/7-removebg-preview (1).png')"><i class="fa-regular fa-heart fa-lg" style="color: #417eee;"></i></a>
+</div>
+</div>
+<div class="products">
+  <img class="pimage" src="./assets/8-removebg-preview.png" alt="">
+  <h6 class="itam">Canon Camera EOS 2000,Black 10x zoom</h6>
+  <h5><b>$998.00</b></h5>
+  <h6 class="cancel"><b>$1128.00</b></h6>
+  <div class="stars">
+    <label for="star5" class="yellow">&#9733;</label>
+    <label for="star4" class="yellow">&#9733;</label>
+    <label for="star3" class="yellow">&#9733;</label>
+    <label for="star2" class="yellow">&#9733;</label>
+    <label for="star1" class="gray">&#9733;</label>
+</div>
+<h6 class="rate">7.5</h6>
+<div class="orders">
+<i class="fa-solid fa-circle fa-2xs" id="dot" style="color: #dedede;"></i>
+<h6 class="ordr">154 orders</h6>
+</div>
+<div class="shipping">
+<i class="fa-solid fa-circle fa-2xs" id="dott" style="color: #dedede;"></i>
+<h6 class="ship">Free Shipping</h6>
+</div>
+<p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi <br> perferendis maiores esse quod consequuntur animi eaque !</p>
+<h2 class="viewdetails"><a href="./details.html"> View Details </a></h2>
+<div class="heartcart">
+  <a href="" onclick="addToCart('Canon Camera EOS 2000', '$998.00', './assets/8-removebg-preview.png')"><i class="fa-regular fa-heart fa-lg" style="color: #417eee;"></i></a>
+</div>
+</div>
+<div class="products">
+  <img class="pimage" src="./assets/white.jpg" alt="">
+  <h6 class="itam">Canon Camera EOS 2000,Black 10x zoom</h6>
+  <h5><b>$998.00</b></h5>
+  <h6 class="cancel"><b>$1128.00</b></h6>
+  <div class="stars">
+    <label for="star5" class="yellow">&#9733;</label>
+    <label for="star4" class="yellow">&#9733;</label>
+    <label for="star3" class="yellow">&#9733;</label>
+    <label for="star2" class="yellow">&#9733;</label>
+    <label for="star1" class="gray">&#9733;</label>
+</div>
+<h6 class="rate">7.5</h6>
+<div class="orders">
+<i class="fa-solid fa-circle fa-2xs" id="dot" style="color: #dedede;"></i>
+<h6 class="ordr">154 orders</h6>
+</div>
+<div class="shipping">
+<i class="fa-solid fa-circle fa-2xs" id="dott" style="color: #dedede;"></i>
+<h6 class="ship">Free Shipping</h6>
+</div>
+<p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur modi <br> perferendis maiores esse quod consequuntur animi eaque !</p>
+<h2 class="viewdetails"><a href="./details.html"> View Details </a></h2>
+<div class="heartcart">
+  <a href="./cart.html" onclick="addToCart('Canon Camera EOS 2000', '$998.00', './assets/white.jpg')"><i class="fa-regular fa-heart fa-lg" style="color: #417eee;"></i></a>
+</div>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+     </section>
+  </div>   
+<footer>
+  <div class="newsletter">
+        <h2>Subscribe on our newsletter</h2>
+        <p>Get daily news on upcomming offers from many suppliers all over the world</p>
+        <div class="newinput">
+          <input type="email" placeholder="Email" required>
+         <button type="submit" class="Subscribe">Subscribe</button>
+        </div>
+  </div>
+  <div class="footer-container">
+      <!-- Left Section: Logo, Company Name, and Paragraph -->
+      <div class="footer-left">
+          <img src="./assets/1.png" alt="Company Logo" class="footer-logo">
+          <h2 >Brand</h2>
+          <p>Providing exceptional services since 1990. Your satisfaction is our priority.</p>
+          <div class="social-icons">
+              <a href="#" class="icon"><i class="fa-brands fa-facebook fa-lg" style="color: #999999;"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-twitter fa-lg" style="color: #999999;"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-linkedin-in fa-lg" style="color: #999999;"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-instagram fa-lg" style="color: #999999;"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-youtube fa-lg" style="color: #999999;"></i></a>
+          </div>
+      </div>
+      
+      <!-- Right Section: Columns -->
+      <div class="footer-right">
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Find store</a></li>
+                  <li><a href="#">Categories</a></li>
+                  <li><a href="#">Blogs</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Partnership</h3>
+              <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Find store</a></li>
+                  <li><a href="#">Categories</a></li>
+                  <li><a href="#">Blogs</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Information</h3>
+              <ul>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Money Refund</a></li>
+                  <li><a href="#">Shipping</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>For Users</h3>
+              <ul>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Register</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">My Orders</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Get App</h3>
+              <ul>
+                  <li><a href="#"><img src="./assets/2.PNG" alt="app" class="footerimg"></a></li>
+                  <li><a href="#"><img src="./assets/3.PNG" alt="play" class="footerimg"></a></li>
+                 
+              </ul>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- Copyright and Language Dropdown -->
+  <div class="footer-bottom">
+      <div class="footer-copyright">
+          <p>&copy; 2023 Ecommerce.</p>
+      </div>
+      <div class="footer-language">
+          <select name="language" id="language-dropdown">
+              <option value="en"> English</option>
+              <option value="es"> Español</option>
+              <option value="fr"> Français</option>
+              <option value="de">Deutsch</option>
+              <option value="it"> Italiano</option>
+          </select>
+      </div>
+  </div>
+</footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

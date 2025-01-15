@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    
+</head>
+<body>
+
+ 
+      <nav class="navbar">
+        <div class="pushbar">
+          <!-- Hamburger Button -->
+          <button class="menu-toggle" id="menu-toggle">
+            &#9776;
+          </button>
+        <!-- Sidebar Menu -->
+          <div class="side-menu" id="side-menu">
+            <div class="gray-row">
+              <img src="./assets/dp.jpg" alt="Logo" class="dp">
+              <div class="auth-links">
+                <a href="#">Sign In</a> | <a href="#">Register</a>
+              </div>
+            </div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a href="#">Categories &#9662;</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Category 1</a></li>
+                  <li><a href="#">Category 2</a></li>
+                  <li><a href="#">Category 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Favorites</a></li>
+              <li><a href="#">My Orders</a></li>
+              <hr>
+              <li class="dropdown">
+                <a href="#">English | USD &#9662;</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">French</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About</a></li>
+              <hr>
+              <li><a href="#">User Agreement</a></li>
+              <li><a href="#">Partnership</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+       <div class="navbar-left">
+          <img src="./assets/1.png" alt="Logo" class="logo">
+          <span class="company-name">Brand</span>
+        </div>
+        <div class="navbar-center">
+          <div class="search-container">
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search..." oninput="showDropdown()">
+            <div class="separator"></div>
+            <select class="search-dropdown" id="categorySelect">
+              <option value="option1">All Categories</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+            <button class="search-button" onclick="searchAction()">Search</button>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <a href="#" class="icon" id="profile">
+            <i  class="fa-solid fa-user fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">profile</p>
+          </a>
+          <a id="mess" href="#" class="icon">
+            <i class="fa-solid fa-message fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">message</p>
+          </a>
+          <a id="mess" href="#" class="icon">
+            <i class="fa-solid fa-heart fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">order</p>
+          </a>
+          <a href="./cart.html" class="icon">
+            <i class="fa-solid fa-cart-shopping fa-xl" style="color: #9b9b9b;"></i>
+            <p class="pro">cart</p>
+          </a>
+        </div>
+       </nav>
+      <div class="searchnav">
+        <input class="searchinp" type="search" placeholder="Search">
+        <div class="navbutton">
+        <button class="button1" id="cat"><a href=""> Categories</a></button>
+        <button class="button1"><a href="./product.html">Gadgets</a></button>
+        <button class="button1"><a href="">Clothes</a></button>
+        <button class="button1"><a href="">Accessory</a></button>
+        <button class="button1" id="auto"><a href="">Automobile</a></button>
+        </div>
+      </div>
+     <nav class="navbar2"  >
+      <ul class="navbar-left">
+          <li class="dropdown"> 
+              <a href="#">All categories</a>
+              <div class="dropdown-content">
+                  <a href="auto.html">Automobile</a>
+                  <a href="product.html">Clothes & wear</a>
+                  <a href="auto.html">Home interior</a>
+                  <a href="./product.html">Computer & tech</a>
+                  <a href="product.html">Tools, equipment</a>
+                  <a href="auto.html">Sports & outdoor</a>
+                  <a href="product.html">Animal & pet</a>
+                  <a href="auto.html">Machinery tools</a>
+              </div>
+          </li>
+          <li><a href="#">Hot offers</a></li>
+          <li><a href="#">Gift boxes</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Menu item</a></li>
+          <li class="dropdown">
+              <a href="#">Help</a>
+              <div class="dropdown-content">
+                  <a href="#">Subitem 1</a>
+                  <a href="#">Subitem 2</a>
+                  <a href="#">Subitem 3</a>
+              </div>
+          </li>
+      </ul>
+      <ul class="navbar2-right">
+          <li class="dropdown">
+              <a href="#">English, USD</a>
+              <div class="dropdown-content">
+                  <a href="#">Turkish Lira, TRY</a>
+                  <a href="#">Pakistan, PKR</a>
+                  <a href="#">EUROPE, EURO</a>
+              </div>
+          </li>
+          <li class="dropdown">
+              <a href="#">Ship to</a>
+              <div class="dropdown-content">
+                  <a href="#">Pakistan</a>
+                  <a href="#">America</a>
+                  <a href="#">Europe</a>
+                  <a href="#">Germany</a>
+                  <a href="#">Africa</a>
+                  <a href="#">India</a>
+                  <a href="#">Greece</a>
+                  <a href="#">Turkey</a>
+                  <a href="#">Saudia Arabia</a>
+                  <a href="#">Iran</a>
+                  <a href="#">Italy</a>
+              </div>
+          </li>
+      </ul>
+  </nav>
+  <div class="herosection">
+  <section class="hero">
+    <div class="hero-column1">
+      <p><a href="./auto.html">Automobile</a></p>
+      <p><a href="./product.html">Clothes and wear</a></p>
+      <p><a href="./auto.html">Home interiors</a></p>
+      <p><a href="./product.html">Computer and tech</a></p>
+      <p><a href="./product.html">Tools, equipment</a></p>
+      <p><a href="./auto.html">Sports and outdoor</a></p>
+      <p><a href="./product.html">Animals and pets</a></p>
+      <p><a href="./auto.html">Machinery tools</a></p>
+    </div>
+    <div class="hero-column2">
+      <img src="./assets/banner.png" alt="banner" class="banner">
+      <button class="bannerbutton"><a href="">Learn more</a></button>
+    </div>
+    <div class="hero-column3">
+      <div class="c1">
+       <img src="./assets/dp.jpg" alt="" class="c3dp">
+       <p>Hi User <br>Let's get started</p>
+       <button class="join"><a href="">Join now</a></button><br>
+       <button class="login"><a href="">log in</a></button>
+      </div>
+      <div class="orange">
+        <p>Get US 10% off <br> with a new <br>supplier</p>
+      </div>
+      <div class="teal">
+        <p>Send quotes with <br> supplier <br> prefences</p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- grid 1 -->
+<section class="grid-container">
+  <div class="grid-item1">
+    <h2>Deals and offers</h2>
+    <h3>hygene equipment</h3>
+    <img class="time" src="./assets/time.png" alt="time">
+  </div>
+  <div class="grid-item">
+    <img class="gridimg" src="./assets/8-removebg-preview.png" alt="">
+    <h2>Smart watches</h2>
+    <button class="salebtn">-25%</button>
+  </div>
+  <div class="grid-item">
+    <img class="gridimg" src="./assets/7-removebg-preview (1).png" alt="">
+    <h2>Laptop</h2>
+    <button class="salebtn">-15%</button>
+  </div>
+  <div class="grid-item" > 
+    <img  class="gridimg" src="./assets/6-removebg-preview.png" alt="">
+    <h2>GOPro cameras</h2>
+    <button class="salebtn">-40%</button></div>
+  <div class="grid-item" id="no">
+    <img   class="gridimg" src="./assets/5-removebg-preview.png" alt="">
+    <h2>Headphones</h2>
+    <button class="salebtn">-25%</button>
+  </div>
+  <div class="grid-item" id="no">
+    <img  class="gridimg" src="./assets/3-removebg-preview.png" alt="">
+    <h2>Conon cameras</h2>
+    <button class="salebtn">-25%</button>
+  </div>
+</section>
+<section class="grid-container2">
+  <div class="grid-item2 item1">
+    <img class="leftsideimg" src="./assets/left-aside.png" alt="">
+    <p class="home"><b>Home and <br> outdoor</b></p>
+    <button class="sourcebtn">Source now</button>
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Soft chairs</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/1.jpg" alt="">
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Soft & chairs</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/6.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Kitchen dishes</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/5.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Smart watches</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/3.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Kitchen mixer</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/9.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Blenders</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/8.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Home appliance</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/7.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Coffee maker</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/4.jpg" alt="">
+  
+  </div>
+</section>
+
+
+<section class="grid-container2">
+  <div class="grid-item2 item1">
+    <img class="leftsideimg" src="./assets/left-side.png" alt="">
+    <p class="home"><b>Consumer <br>electronics and <br> gadgets</b></p>
+    <button class="sourcebtn">Source now</button>
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Smart watches</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/8-removebg-preview.png"alt="">
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Camera</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/6-removebg-preview.png" alt="">
+  
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Headphone</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/white.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2">
+    <p class="items"><b>Smart watches</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/10.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Kitchen mixer</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/5-removebg-preview.png" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Blenders</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/7-removebg-preview (1).png" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Home appliance</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/2.jpg" alt="">
+  
+  </div>
+  <div class="grid-item2" id="non">
+    <p class="items"><b>Coffee maker</b></p>
+    <p class="items1">From <br> USD 19</p>
+    <img class="sofa" src="./assets/red.jpg" alt="">
+  </div>
+</section>
+<div class="inquirysection"> 
+  <img class="inquiryimage" src="./assets/Group 982 (1).png" alt="">
+  <h2><b>An easy way to send <br>requests to all suppliers</b></h2>
+  <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nihil cumque, adipisci <br>nobis distinctio unde consequatur modi sint officiis quam! Cupiditate .</p>
+<div class="form">
+  <h4><b>Send quote to suppliers</b></h4>
+  <p class="wht">What item u need</p>
+  <input class="more" type="text" placeholder="type more details">
+  <p class="Quantity">Quantity</p>
+  <div class="peaces">
+    <select name="language" id="language-dropdown">
+        <option value="en"> Pcs</option>
+        <option value="es"> 1</option>
+        <option value="fr"> 2</option>
+        <option value="de">3</option>
+        <option value="it"> 4</option>
+    </select>
+</div>
+<button class="send">send inquiry</button>
+</div>
+</div>
+<!-- cards -->
+ <h3 class="Recommended"><b>Recommended items </b></h3>
+ <div class="row row-cols-1 row-cols-md-5 g-5">
+  <div class="col" id="card1">
+    <div class="card h-100">
+      <img src="./assets/1st.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">$10.30</h5>
+        <p class="card-text">T-shirts with multiple colors for men</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="./assets/2nd.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">$10.30</h5>
+        <p class="card-text">Brown winter coat medium size</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="./assets/3rd.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">$12.40</h5>
+        <p class="card-text">Jeans shorts form men blue color</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="./assets/4th.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">$34.00</h5>
+        <p class="card-text">Leather wallet</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="./assets/5ft.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">$99.00</h5>
+        <p class="card-text">Jeans bag for travel for men</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<!-- cards row 2 -->
+<div class="row row-cols-1 row-cols-md-5 g-4">
+ <div class="col" id="card1">
+   <div class="card h-100">
+     <img src="./assets/6t.jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">$10.30</h5>
+       <p class="card-text">T-shirts with multiple colors for men</p>
+     </div>
+   </div>
+ </div>
+ <div class="col">
+   <div class="card h-100">
+     <img src="./assets/white.jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">$10.30</h5>
+       <p class="card-text">Brown winter coat medium size</p>
+     </div>
+   </div>
+ </div>
+ <div class="col">
+   <div class="card h-100">
+     <img src="./assets/5ft.jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">$12.40</h5>
+       <p class="card-text">Jeans shorts form men blue color</p>
+     </div>
+   </div>
+ </div>
+ <div class="col">
+   <div class="card h-100">
+     <img src="./assets/3.jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">$34.00</h5>
+       <p class="card-text">Leather wallet</p>
+     </div>
+   </div>
+ </div>
+ <div class="col">
+   <div class="card h-100">
+     <img src="./assets/10.jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">$99.00</h5>
+       <p class="card-text">Jeans bag for travel for men</p>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- services -->
+<br>
+<h3 class="Recommended"><b>Our extra services</b></h3>
+<div class="services">
+  <div class="box box4">
+    <img class="serimg" src="./assets/Mask group.png" alt="">
+    <div class="blck"></div>
+    <div class="white">
+      <i id="go" class="fa-solid fa-magnifying-glass fa-xl"></i>
+    </div>
+    <p class="source">Source from <br>industry hubs</p>
+  </div>
+  <div class="box box5">
+     <img class="serimg" src="./assets/Mask group (2).png" alt="">
+    <div class="blck"></div>
+    <div class="white">
+      <i id="go" class="fa-solid fa-shop fa-xl"></i>
+    </div>
+    <p class="source">Source from <br>industry hubs</p>
+  </div>
+  <div class="box box6">
+    <img class="serimg" src="./assets/Mask group (3).png" alt="">
+    <div class="blck"></div>
+    <div class="white">
+      <i id="go" class="fa-solid fa-paper-plane fa-xl"></i>
+    </div>
+    <p class="source">Source from <br>industry hubs</p>
+  </div>
+  <div class="box box7"> 
+    <img class="serimg" src="./assets/Mask group (4).png" alt="">
+    <div class="blck"></div>
+    <div class="white">
+      <i id="go" class="fa-solid fa-shield-halved fa-xl"></i>
+    </div>
+    <p class="source">Source from <br>industry hubs</p></div>
+</div>
+<br>
+<br>
+<div class="flags">
+  <div class="regions">
+    <img class="flgimg" src="./assets/ar.webp" alt="">
+    <p class="arab">Arabic Emirates</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/aaus.webp" alt="">
+    <p class="arab">Australia</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/us.png" alt="">
+    <p class="arab">United States</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/russia.jfif" alt="">
+    <p class="arab">Russia</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/italy.png" alt="">
+    <p class="arab">Italy</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+</div>
+<div class="flags">
+  <div class="regions">
+    <img class="flgimg" src="./assets/denmark.png" alt="">
+    <p class="arab">Denmark</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/china.png" alt="">
+    <p class="arab">China</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/france.png" alt="">
+    <p class="arab">france</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/ar.webp" alt="">
+    <p class="arab">Arab Emirates</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+  <div class="regions">
+    <img class="flgimg" src="./assets/aaus.webp" alt="">
+    <p class="arab">Australia</p>
+    <p class="arab2"> shopname.av</p>
+  </div>
+</div>
+ 
+  
+  <footer>
+    <div class="newsletter">
+          <h2>Subscribe on our newsletter</h2>
+          <p>Get daily news on upcomming offers from many suppliers all over the world</p>
+          <div class="newinput">
+            <input type="email" placeholder="Email" required>
+           <button type="submit" class="Subscribe">Subscribe</button>
+          </div>
+    </div>
+    <div class="footer-container">
+        <!-- Left Section: Logo, Company Name, and Paragraph -->
+        <div class="footer-left">
+            <img src="./assets/1.png" alt="Company Logo" class="footer-logo">
+            <h2 >Brand</h2>
+            <p>Providing exceptional services since 1990. Your satisfaction is our priority.</p>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-facebook fa-lg" style="color: #999999;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-twitter fa-lg" style="color: #999999;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in fa-lg" style="color: #999999;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-instagram fa-lg" style="color: #999999;"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-youtube fa-lg" style="color: #999999;"></i></a>
+            </div>
+        </div>
+        
+        <!-- Right Section: Columns -->
+        <div class="footer-right">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Partnership</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Money Refund</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>For Users</h3>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">My Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get App</h3>
+                <ul>
+                    <li><a href="#"><img src="./assets/2.PNG" alt="app" class="footerimg"></a></li>
+                    <li><a href="#"><img src="./assets/3.PNG" alt="play" class="footerimg"></a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- Copyright and Language Dropdown -->
+    <div class="footer-bottom">
+        <div class="footer-copyright">
+            <p>&copy; 2023 Ecommerce.</p>
+        </div>
+        <div class="footer-language">
+            <select name="language" id="language-dropdown">
+                <option value="en"> English</option>
+                <option value="es"> Español</option>
+                <option value="fr"> Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it"> Italiano</option>
+            </select>
+        </div>
+    </div>
+</footer>
+
+
+    
+      <script src="script.js"></script>
+    
+    
+</body>
+</html>
